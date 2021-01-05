@@ -1,5 +1,18 @@
 const assert = require('assert');
 
+// WRITE THE ACTUAL FUNCTION HERE
+function capitalizeFirstLetters(input) {
+  array = input.split(' ');
+  newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length > 0) {
+      newArray.push(array[i][0].toUpperCase() + array[i].slice(1));
+    } else {
+      newArray;
+    }
+  }
+  return newArray.join(' ');
+}
 
 // Check that capitalizeFirstLetters is a function
 assert.strictEqual(typeof capitalizeFirstLetters, 'function');
@@ -21,3 +34,4 @@ assert.strictEqual(capitalizeFirstLetters('z'), 'Z');
 // Check that it works for an empty string
 assert.strictEqual(capitalizeFirstLetters(''), '');
 
+console.log(capitalizeFirstLetters('i am learning tdd'));
